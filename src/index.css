@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom agricultural touches */
+.pattern-bg {
+  background-color: #f0fdf4;
+  background-image: radial-gradient(#86efac 0.75px, transparent 0.75px), radial-gradient(#86efac 0.75px, #f0fdf4 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Smooth transitions */
+button, a, input, select {
+  @apply transition-all duration-150;
+}
+
+/* Print styling for Crop Cost Report */
+@media print {
+  body {
+    background: white !important;
+  }
+  header, nav, .no-print {
+    display: none !important;
+  }
+}
